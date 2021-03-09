@@ -28,6 +28,9 @@ class LiteralyDemo {
         System.out.println('g' + "odzina");
         System.out.println('g' + 77); // ASCII
 
+        System.out.println((2+2) *5);
+
+
     }
 
 }
