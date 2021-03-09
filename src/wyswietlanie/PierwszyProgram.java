@@ -1,3 +1,5 @@
+package wyswietlanie;
+
 class PierwszyProgram {
 
     public static void main(String[] args) {
@@ -8,6 +10,5 @@ class PierwszyProgram {
         System.out.println("Wi\ntamy na kursie \"Java od Podstaw\" !");
 
         System.out.println("Hello\n\nWitamy na kursie!");
-
     }
 }
