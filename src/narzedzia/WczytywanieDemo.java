@@ -1,4 +1,4 @@
-package wczytywanie;
+package narzedzia;
 
 
 import java.util.Scanner;
