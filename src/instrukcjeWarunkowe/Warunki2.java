@@ -4,10 +4,13 @@ import java.util.Scanner;
 
 class Warunki2 {
     public static void main(String[] args) {
+
+
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Jaką temperaturę ma woda?");
-        //int temperatura =  scanner.nextInt();
-        int temperatura = 10;
+        int temperatura =  scanner.nextInt();
+//        int temperatura = 10;
 
 
         if (temperatura >= 100) {
@@ -31,6 +34,15 @@ class Warunki2 {
         System.out.println(14%5);  //5,10 -> zostało 4
         System.out.println(3%2);  // 2 ->  1
         System.out.println(4%2);  // 2,4 ->  0
+
+        boolean pelnoletni = true;
+
+
+        if (!pelnoletni ) {
+            System.out.println("Nie może palić");
+        } else {
+            System.out.println("Może palić papierosy");
+        }
 
 
     }
