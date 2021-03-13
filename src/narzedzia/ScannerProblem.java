@@ -12,7 +12,7 @@ public class ScannerProblem {
         scanner.nextLine();
 
         System.out.println("Podaj gatunek zwierząt");
-        String gatunek = scanner.nextLine();
+        String gatunek = scanner.next();
 
         System.out.println("Ilość: " + ilosc);
         System.out.println("Gatunek: " + gatunek);
