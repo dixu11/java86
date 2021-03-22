@@ -13,9 +13,6 @@ public class TabliceIPetle {
             }
             index++;
         }
-
-
-
     }
 
 }
