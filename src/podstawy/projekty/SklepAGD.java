@@ -22,7 +22,6 @@ Obliczona miesięczna rata powinna zawierać również odsetki.
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Podaj cene z zakresu 100-10 000");
         double cena = scanner.nextDouble();
         if (cena < 100 || cena > 10000) {
@@ -47,7 +46,5 @@ Obliczona miesięczna rata powinna zawierać również odsetki.
         double cenaZPodatkiem = cena * (1.0 + creditRation);
         double cenaRaty = cenaZPodatkiem / raty;
         System.out.println("Cena raty wynosi: " + cenaRaty + "zł");
-
-
     }
 }
