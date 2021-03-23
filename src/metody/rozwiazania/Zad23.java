@@ -9,13 +9,7 @@ public class Zad23 {
 //        wyświetla “cześć <imie>” jeśli powyżej 20, wyświetla “dzień dobry <imie>”
 //        metoda przyjmuje tablicę imion i wita wszystkie przekazane osoby :)
 //
-//        wariant trudniejszy: metoda przyjmuje ilość sztuk towaru, cenę oraz podatek.
-//        Powinna wyliczyć łączoną cenę towaru. Jeśli cena przekracza 100 zł powinna
-//        ustawić zmienną boolean darmowaWysylka na true. Przygotuj drugą, pomocniczą
-//        metodę dla tej pierwszej, która przyjmie łączoną cenę towaru oraz informację
-//        o darmowejWysylce i wyświetli stosowny komunikat o cenie do zapłaty oraz
-//        informację czy przesyłka będzie za darmo. Do wyświetlonej ceny powinna
-//        dodać ew. koszt wysyłki + 10zł.
+
 
 
                 przywitaj();
@@ -27,6 +21,9 @@ public class Zad23 {
         przywitaj("Janina",18);
         String[] tablicaImion = {"Mateusz", " Martyna", "Ala", "Piotr", "Janina"};
         przywitaj(tablicaImion);
+
+        wyliczLacznaCene(2,100,0.1);
+        wyliczLacznaCene(2,10,0.1);
     }
 
     static void przywitaj() {
@@ -60,4 +57,34 @@ public class Zad23 {
             System.out.println("Witaj: " + imie);
         }
     }
+
+
+    //        wariant trudniejszy: metoda przyjmuje ilość sztuk towaru, cenę oraz podatek.
+//        Powinna wyliczyć łączoną cenę towaru. Jeśli cena przekracza 100 zł powinna
+//        ustawić zmienną boolean darmowaWysylka na true. Przygotuj drugą, pomocniczą
+//        metodę dla tej pierwszej, która przyjmie łączoną cenę towaru oraz informację
+//        o darmowejWysylce i wyświetli stosowny komunikat o cenie do zapłaty oraz
+//        informację czy przesyłka będzie za darmo. Do wyświetlonej ceny powinna
+//        dodać ew. koszt wysyłki + 10zł.
+
+    static void wyliczLacznaCene(int iloscSztuk, double cena, double podatek){
+        boolean darmowaWysylka = false;
+        double lacznaCena = iloscSztuk * cena * (podatek+1.0);
+        if (lacznaCena > 100){
+            darmowaWysylka = true;
+        }
+        wyswietlPodsumowanie(lacznaCena, darmowaWysylka);
+    }
+
+    static void wyswietlPodsumowanie(double lacznaCena, boolean wysylkaDarmowa) {
+        double doplata = 10;
+        if(wysylkaDarmowa){
+            System.out.println("Darmowa wysyłka!");
+        }else {
+            System.out.println("Dopłata za wysyłkę: " + doplata);
+            lacznaCena += doplata;
+        }
+        System.out.println("Laczna cena to: " + lacznaCena);
+    }
+
 }
