@@ -1,5 +1,7 @@
 package podstawy.projekty;
 
+import metody.MetodyZwracajace;
+
 import java.util.Scanner;
 
 public class SklepAGD {
@@ -31,16 +33,9 @@ Obliczona miesięczna rata powinna zawierać również odsetki.
 
         System.out.println("Podaj ilość rat 6-48");
         int raty = scanner.nextInt();
-        double creditRation;
-        if (raty < 6 || raty > 48) {
-            System.out.println("Nieporawna ilość rat");
-            return;
-        } else if (raty <= 12) {
-            creditRation = 0.025;
-        } else if (raty <= 24) {
-            creditRation = 0.05;
-        } else {
-            creditRation = 0.1;
+        double creditRation = MetodyZwracajace.ustaOprocentowanie(raty); // kod przeniosłem do osobnej metody w klasie MetodyZwracajace
+        if (creditRation == -1) {
+            System.exit(0);
         }
 
         double cenaZPodatkiem = cena * (1.0 + creditRation);
