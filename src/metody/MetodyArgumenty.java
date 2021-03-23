@@ -17,7 +17,18 @@ public class MetodyArgumenty {
         przywitaj("Marta");
 
         dodajLiczby(2,2);
+
+        int[] liczby = {23, 45, 567};
+
+        wyswietlPierwszaLiczbe(liczby);
     }
+
+    public static void wyswietlPierwszaLiczbe( int[] tablica ){
+        System.out.println("Pierwsza liczba z tablicy to: " + tablica[0]);
+    }
+
+
+
 
 
     public static void hello(int liczba, int liczba2){
@@ -35,4 +46,7 @@ public class MetodyArgumenty {
         System.out.println("Wynik to:");
         System.out.println(liczba1 + liczba2);
     }
+
+
+
 }
