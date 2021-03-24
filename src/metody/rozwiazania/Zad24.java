@@ -81,6 +81,8 @@ public class Zad24 {
     }
 
 //    metoda przyjmuje tablicę liczb i zwraca ich sumę
+
+
 //    metoda przyjmuje tablicę liczb oraz liczbę całkowitą, zwraca true jeśli w tablicy istnieje liczba większa od przekazanej, false jeśli nie
 //
 //    wariant trudniejszy: metoda przyjmuje liczbę całkowitą. Powinna zwrócić tablicę liczb pierwszych nie większych niż przekazana liczba.
