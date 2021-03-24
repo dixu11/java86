@@ -1,4 +1,4 @@
-package metody.rozwiazania;
+package podstawy.rozwiazania;
 
 import java.util.Random;
 

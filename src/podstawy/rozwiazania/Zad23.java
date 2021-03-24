@@ -1,4 +1,4 @@
-package metody.rozwiazania;
+package podstawy.rozwiazania;
 
 public class Zad23 {
     public static void main(String[] args) {
