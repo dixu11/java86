@@ -19,6 +19,10 @@ import java.util.Scanner;
 public class LoteriaMetody {
 
     public static void main(String[] args) {
+        zagrajWLoterie();
+    }
+
+   public static void zagrajWLoterie() {
         int[] wprowadzone = wprowadzLiczby();
         System.out.println("Twoje liczby: ");
         wyswietlZbior(wprowadzone);
