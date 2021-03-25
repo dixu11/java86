@@ -1,4 +1,4 @@
-package podstawy.rozwiazania;
+package rozwiazania;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package podstawy.rozwiazania;
+package rozwiazania;
 
 
  /*Przygotuj następujące metody i przetesuj w main:

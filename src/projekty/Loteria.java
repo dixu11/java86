@@ -1,4 +1,4 @@
-package podstawy.projekty;
+package projekty;
 
 //        Symulator loterii liczbowej:
 //        wprowadzenie 6 liczb (1-24)

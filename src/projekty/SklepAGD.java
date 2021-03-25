@@ -1,4 +1,4 @@
-package podstawy.projekty;
+package projekty;
 
 import metody.MetodyZwracajace;
 

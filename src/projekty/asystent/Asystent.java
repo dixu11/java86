@@ -1,0 +1,69 @@
+package projekty.asystent;
+
+import java.util.Random;
+
+public class Asystent {
+
+    /*Etap 1:
+    Stwórz pakiet asystent i skopiuj do niego trzy klasy najciekawszych programów które do tej pory zrobiłeś.
+    W klasie Asystent zaimplementuj metodę główną void rozpocznijProgram( ) i wywołaj ją w metodzie main.
+    Następnie zaimplementuj dwie metody pomocnicze:
+    String generujPowitanie() - losuje jedno z pięciu możliwych przywitań,
+    String generujPozegnanie() - zwraca tekst składający się losowo z 1-5 słów “pa” zakończonych “!” np. “papapa!”
+    Wywołaj te metody i wyświetl zwrócone wartości w konsoli.*/
+
+    /*
+    * Etap 2:
+Nad metodami dodaj statyczne pole przechowujące dostępne opcje programu jako tablica typu String. Przykładowe opcje: “Zagrajmy w lotto”, “wyświetl prostokąt”, “policz do 10”.
+Zaimplementuj metodę void uruchomMenu() i wywołaj ją pomiędzy przywitaniem, a pożegnaniem. Metoda powinna korzystać z 3 mniejszych metod:
+void drukujListeOpcji( ) - metoda drukuje opcję z jej numerem wykorzystując wcześniej stworzone pole,
+int pobierzWybor( ) - metoda prosi o podanie opcji interesującej użytkownika tak długo, dopóki nie poda on liczby z właściwego zakresu i zwraca wybór,
+void uruchomOpcje( int ) - metoda przyjmuje wcześniej pobraną liczbę i wyświetla opcję, która została wybrana.
+    * */
+
+    private static String[] dostepneOpcje = {
+            "Zagraj w loterię",
+            "Kup produkt na raty",
+            "przelicz minuty na milisekundy",
+            "zamknij program"
+    };
+
+    public static void main(String[] args) {
+        rozpocznijProgram();
+    }
+
+    private static void rozpocznijProgram() {
+        System.out.println(generujPowitanie());
+        uruchomMenu();
+        System.out.println(generujPozegnanie());
+    }
+
+    private static String generujPowitanie() {
+        String[] przywitania = {"Cześć", "Czołem", "Witaj", "Siema", "Dzień dobry", "Elo"};
+        Random random = new Random();
+        int i = random.nextInt(przywitania.length);
+        return przywitania[i] + "!";
+    }
+
+    private static void uruchomMenu() {
+        wyswietlOpcje();
+    }
+
+    private static void wyswietlOpcje() {
+        System.out.println("Dostępne opcje:");
+        for (int i = 0; i < dostepneOpcje.length; i++) {
+            System.out.println(i+1 + ". " + dostepneOpcje[i]);
+        }
+    }
+
+    private static String generujPozegnanie() {
+        String pozegnanie = "";
+        Random random = new Random();
+        int ileRazy = random.nextInt(5) + 1;
+        for (int i = 0; i < ileRazy; i++) {
+            pozegnanie += "pa";
+        }
+        return pozegnanie + "!";
+    }
+
+}

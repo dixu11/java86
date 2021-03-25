@@ -1,7 +1,5 @@
 package podstawy.wyrazenieSwitch;
 
-import podstawy.projekty.LoteriaMetody;
-
 import java.util.Scanner;
 
 public class InstrukcjeSwitch {
