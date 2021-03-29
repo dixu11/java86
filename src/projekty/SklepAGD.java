@@ -21,25 +21,42 @@ Obliczona miesięczna rata powinna zawierać również odsetki.
 
     *
     * */
+  private static Scanner scanner = new Scanner(System.in);
+
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+       kupSprzet();
+    }
+
+    public static void kupSprzet() {
+        double cena = podajCene();
+        int iloscRat = pobierzIloscRat();
+        double creditRation = MetodyZwracajace.ustaOprocentowanie(iloscRat); // kod przeniosłem do osobnej metody w klasie MetodyZwracajace
+        if (creditRation == -1) {
+            System.exit(0);
+        }
+        double cenaZPodatkiem = cena * (1.0 + creditRation);
+        double cenaRaty = cenaZPodatkiem / iloscRat;
+        System.out.println("Cena raty wynosi: " + cenaRaty + "zł");
+    }
+
+    private static double podajCene() {
         System.out.println("Podaj cene z zakresu 100-10 000");
         double cena = scanner.nextDouble();
         if (cena < 100 || cena > 10000) {
             System.out.println("Nieporawna cena");
             System.exit(1);
         }
+        return cena;
+    }
 
+    private static int pobierzIloscRat() {
         System.out.println("Podaj ilość rat 6-48");
         int raty = scanner.nextInt();
-        double creditRation = MetodyZwracajace.ustaOprocentowanie(raty); // kod przeniosłem do osobnej metody w klasie MetodyZwracajace
-        if (creditRation == -1) {
-            System.exit(0);
-        }
 
-        double cenaZPodatkiem = cena * (1.0 + creditRation);
-        double cenaRaty = cenaZPodatkiem / raty;
-        System.out.println("Cena raty wynosi: " + cenaRaty + "zł");
+        return raty;
     }
+
+
+
 }

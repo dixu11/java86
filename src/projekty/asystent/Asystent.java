@@ -1,5 +1,9 @@
 package projekty.asystent;
 
+import projekty.Loteria;
+import projekty.LoteriaMetody;
+import projekty.SklepAGD;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -28,6 +32,7 @@ void uruchomOpcje( int ) - metoda przyjmuje wcześniej pobraną liczbę i wyświ
             "przelicz minuty na milisekundy",
             "zamknij program"
     };
+    private static boolean uruchomiony = true;
 
     public static void main(String[] args) {
         rozpocznijProgram();
@@ -47,10 +52,13 @@ void uruchomOpcje( int ) - metoda przyjmuje wcześniej pobraną liczbę i wyświ
     }
 
     private static void uruchomMenu() {
-        wyswietlOpcje();
-        int wybor = pobierzWybor();
-        System.out.println("Wybrano: "+ wybor);
-        uruchomOpcje(wybor);
+        do {
+            wyswietlOpcje();
+            int wybor = pobierzWybor();
+            System.out.println("Wybrano: "+ wybor);
+            uruchomOpcje(wybor);
+            wstawPrzerwe();
+        }while (uruchomiony );
     }
 
     private static void wyswietlOpcje() {
@@ -75,20 +83,29 @@ void uruchomOpcje( int ) - metoda przyjmuje wcześniej pobraną liczbę i wyświ
     private static void uruchomOpcje(int wybor){
         switch (wybor){
             case 1:
-                System.out.println("Loteria");
+                LoteriaMetody.zagrajWLoterie();
                 break;
             case 2:
-                System.out.println("Kupno produktu");
+                SklepAGD.kupSprzet();
                 break;
             case 3:
-                System.out.println("PRzelicz minuty");
+                przeliczMinuty();
                 break;
             case 4:
                 System.out.println("Zamknij program");
+                uruchomiony = false;
                 break;
             default:
                 System.out.println("Nie ma takiej opcji"); //ponieważ już wcześnie sprawdzam - nie ma prawa tu wejsc
         }
+    }
+
+    private static void przeliczMinuty() {
+        System.out.println("Podaj ilośc minut:");
+        Scanner scanner = new Scanner(System.in);
+        int minuty = scanner.nextInt();
+        long milisekundy = PrzeliczanieCzasu.przeliczMinutyNaMilisekundy(minuty);
+        System.out.println(minuty + " minut to " + milisekundy + " milisekund");
     }
 
     private static String generujPozegnanie() {
@@ -99,6 +116,12 @@ void uruchomOpcje( int ) - metoda przyjmuje wcześniej pobraną liczbę i wyświ
             pozegnanie += "pa";
         }
         return pozegnanie + "!";
+    }
+
+    private static void wstawPrzerwe(){
+        for (int i = 0; i < 5; i++) {
+            System.out.println();
+        }
     }
 
 }
