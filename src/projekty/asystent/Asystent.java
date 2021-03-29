@@ -1,6 +1,7 @@
 package projekty.asystent;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Asystent {
 
@@ -47,12 +48,46 @@ void uruchomOpcje( int ) - metoda przyjmuje wcześniej pobraną liczbę i wyświ
 
     private static void uruchomMenu() {
         wyswietlOpcje();
+        int wybor = pobierzWybor();
+        System.out.println("Wybrano: "+ wybor);
+        uruchomOpcje(wybor);
     }
 
     private static void wyswietlOpcje() {
         System.out.println("Dostępne opcje:");
         for (int i = 0; i < dostepneOpcje.length; i++) {
             System.out.println(i+1 + ". " + dostepneOpcje[i]);
+        }
+    }
+
+    private static int pobierzWybor(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Napisz numer wybranej opcji:");
+        int wybor = scanner.nextInt();
+        if (wybor > 0 && wybor <= dostepneOpcje.length) {
+            return wybor;
+        } else {
+            System.out.println("Niepoprawny numer, wpisz liczbę z zakresu od 1 do " + dostepneOpcje.length);
+           return pobierzWybor();
+        }
+    }
+
+    private static void uruchomOpcje(int wybor){
+        switch (wybor){
+            case 1:
+                System.out.println("Loteria");
+                break;
+            case 2:
+                System.out.println("Kupno produktu");
+                break;
+            case 3:
+                System.out.println("PRzelicz minuty");
+                break;
+            case 4:
+                System.out.println("Zamknij program");
+                break;
+            default:
+                System.out.println("Nie ma takiej opcji"); //ponieważ już wcześnie sprawdzam - nie ma prawa tu wejsc
         }
     }
 
