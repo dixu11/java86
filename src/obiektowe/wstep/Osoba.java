@@ -6,6 +6,13 @@ public class Osoba {
     String nazwa;
     int wiek = 18;
 
+    //konstruktory
+    public Osoba(String nazwaOsoby , int startowyWiek){
+        nazwa = nazwaOsoby;
+        wiek = startowyWiek;
+    }
+
+
     // zachowania - metody
      void wyswietlDane(){
         System.out.println("Mam na imie " + nazwa);

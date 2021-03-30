@@ -11,18 +11,18 @@ public class ObiektoweWstep {
         int[] liczby = new int[]{23, 56, 67, 23};
 
       // MojaKlasa mojObiekt1 = new MojaKlasa();
-        Osoba osoba1 = new Osoba();
-        Osoba osoba2 = new Osoba();
+        Osoba osoba1 = new Osoba("Radek", 18);
+        Osoba osoba2 = new Osoba("Marcin", 30);
 
 //        Osoba.imie  // tak dostałbym się tylko do statycznej składowej
 
-        osoba1.nazwa = "Radek";
-        osoba2.nazwa = "Marcin";
+//        osoba1.nazwa = "Radek";
+//        osoba2.nazwa = "Marcin";
 
         System.out.println(osoba1.nazwa);
         System.out.println(osoba2.nazwa);
 
-        osoba1.wiek = 30;
+//        osoba1.wiek = 30;
 
         System.out.println(osoba1.wiek);
         System.out.println(osoba2.wiek);
