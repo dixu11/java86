@@ -29,8 +29,10 @@ public class ObiektoweWstep {
 
        // Osoba.wyswietlDane();
 
-        osoba1.wyswietlDane();
-        osoba2.wyswietlDane();
+//        osoba1.wyswietlDane();
+//        osoba2.wyswietlDane();
+        System.out.println(osoba1);
+        System.out.println(osoba2);
 
         osoba1.wyprawUrodziny();
         osoba1.wyswietlDane();

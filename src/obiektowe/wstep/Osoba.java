@@ -12,6 +12,10 @@ public class Osoba {
         System.out.println("Mam lat: " + wiek);
     }
 
+  public   String toString(){
+        return "imie : " + nazwa + " wiek: " + wiek;
+    }
+
     void wyprawUrodziny() {
          wiek+=1;
         System.out.println(nazwa + " obchodzi urodziny!");
