@@ -24,22 +24,26 @@ Stwórz klasę typu Samochod oraz SamochodDemo z metodą main.
 public class SamochodDemo {
 
     public static void main(String[] args) {
-      Samochod samochod1 =  new Samochod();
-        samochod1.marka = "BMW";
-        samochod1.przebieg = 1000;
+      Samochod samochod1 =  new Samochod("BMW",1000);
+//        samochod1.marka = "BMW";
+//        samochod1.przebieg = 1000;
 
-      Samochod samochod2 =  new Samochod();
-        samochod2.marka = "Fiat";
-        samochod2.przebieg = 500;
+      Samochod samochod2 =  new Samochod("Fiat", 500);
+//        samochod2.marka = "Fiat";
+//        samochod2.przebieg = 500;
 
-        samochod1.wyswietlDane();
-        samochod2.wyswietlDane();
+//        samochod1.wyswietlDane();
+//        samochod2.wyswietlDane();
+      System.out.println(samochod1);
+      System.out.println(samochod2);
 
         samochod1.jedz(50);
         samochod2.jedz(190);
 
-        samochod1.wyswietlDane();
-        samochod2.wyswietlDane();
+//        samochod1.wyswietlDane();
+//        samochod2.wyswietlDane();
+      System.out.println(samochod1);
+      System.out.println(samochod2);
 
         System.out.println(samochod1.ileDoPrzegladu());
         System.out.println(samochod2.ileDoPrzegladu());
