@@ -20,18 +20,18 @@ public class KomputerManager {
         return wlasnyKomputer;
     }
 
-    public void zagrajNaKomputerze( Komputer komputer   ){
+    public void zagrajNaKomputerze(Komputer komputer) {
         System.out.println("W jaką grę chcesz zagrać?");
         String gra = scanner.nextLine();
         System.out.println("Powodzenia!");
         komputer.uruchomGre(gra);
     }
 
-        public void zwiekszRam(Komputer komputer){
-            System.out.println("Zwiększymy Ci ram");
-            komputer.ram = komputer.ram * 2;
-            System.out.println("Twój komputer ma teraz " + komputer.ram + " gb pamięci");
-        }
+    public void zwiekszRam(Komputer komputer) {
+        System.out.println("Zwiększymy Ci ram");
+        komputer.setRam(komputer.getRam() * 2);
+        System.out.println("Twój komputer ma teraz " + komputer.getRam() + " gb pamięci");
+    }
 
 
 }

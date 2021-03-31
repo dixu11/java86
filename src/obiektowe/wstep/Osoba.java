@@ -3,8 +3,8 @@ package obiektowe.wstep;
 public class Osoba {
 
     // cechy - pola
-    String nazwa;
-    int wiek = 18;
+   private String nazwa;
+   private int wiek = 18;
 
     //konstruktory
     public Osoba(String nazwaOsoby , int startowyWiek){
@@ -41,6 +41,7 @@ public class Osoba {
     }
 
 
-
-
+    public String getNazwa() {
+        return nazwa;
+    }
 }

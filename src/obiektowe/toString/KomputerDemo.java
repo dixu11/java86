@@ -31,7 +31,7 @@ public class KomputerDemo {
         komputer2.uruchomGre("Cyberpunk");
         komputer2.uruchomGre("Tetris");
 
-        komputer.ram = 16;
+        komputer.setRam(16);
 
 
     }

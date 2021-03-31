@@ -19,13 +19,13 @@ public class ObiektoweWstep {
 //        osoba1.nazwa = "Radek";
 //        osoba2.nazwa = "Marcin";
 
-        System.out.println(osoba1.nazwa);
-        System.out.println(osoba2.nazwa);
+//        System.out.println(osoba1.nazwa);
+//        System.out.println(osoba2.nazwa);
 
-//        osoba1.wiek = 30;
+     //   osoba1.wiek = 30;
 
-        System.out.println(osoba1.wiek);
-        System.out.println(osoba2.wiek);
+//        System.out.println(osoba1.wiek);
+//        System.out.println(osoba2.wiek);
 
        // Osoba.wyswietlDane();
 
@@ -39,7 +39,7 @@ public class ObiektoweWstep {
 
         osoba2.dodajNazwisko("Kowalski");
         if (osoba2.czyPelnoletni()) {
-            System.out.println(osoba2.nazwa + " jest pełnoletni");
+            System.out.println(osoba2.getNazwa() + " jest pełnoletni");
         }
 
     }

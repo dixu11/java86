@@ -5,8 +5,8 @@ import java.util.Random;
 public class Komputer {
 
     //cechy
-    int ram;
-    String kartaGraficzna;
+   private int ram;
+   private String kartaGraficzna;
 
     // konstruktory
     public Komputer(){
@@ -48,6 +48,19 @@ public class Komputer {
     public String toString(){ // nadpisanie oryginalnej metody toString odziedziczonej z Object
         return "Komputer ma " + ram + " gb ramu oraz kartę: " + kartaGraficzna;
     }
+
+
+    //getter
+    public int getRam(){
+        return ram;
+    }
+
+    //setter
+    public void setRam(int ram) {
+        this.ram = ram;
+    }
+
+
 
 
     //ta metoda już nie potrzebna gdy mamy nadpsany toString :)
