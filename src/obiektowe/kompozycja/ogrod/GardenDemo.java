@@ -28,7 +28,11 @@ public class GardenDemo {
         Flower[] flowers = {flower1,flower2}; // skrocony sposób
 
         Garden garden = new Garden(flowers, 5); // Flower[]
-        //garden.showFlowers();
+        System.out.println(garden);
+        garden.sitOnBench();
+        garden.waterAllFlowers();
+        System.out.println(garden);
+        System.out.println("zebrałeś: " + garden.gatherAllFruits() + " owoców");
         System.out.println(garden);
     }
 }

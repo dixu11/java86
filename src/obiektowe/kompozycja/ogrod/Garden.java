@@ -9,37 +9,40 @@ public class Garden {
     //kilka kwiatów -> Flower[]
 
     private Bench bench = new Bench("drewno"); // stworzy się sama
-    private Flower[] flowers; // wstawić z maina
-    private Tree[] trees = null; // trzeba wybrać ilość drzew
+    private Flower[] flowers ; // wstawić z maina
+    private Tree[] trees ; // trzeba wybrać ilość drzew
 
 
-
-    public Garden(Flower[] flowers, int treesCount){
+    public Garden(Flower[] flowers, int treesCount) {
         this.flowers = flowers;
-        Tree[] trees = new Tree[treesCount];
+        trees = new Tree[treesCount];
         for (int i = 0; i < treesCount; i++) {
             trees[i] = new Tree();
         }
         System.out.println(Arrays.toString(trees));
-
     }
 
+    //siądź na ławce
+    public void sitOnBench() {
+        bench.sit();
+    }
 
-    public void showFlowers() {
-        for (Flower flower : flowers) {
+    //podlej wszystkie kwiaty
+    public void waterAllFlowers(){
+        for(Flower flower : flowers){
+            flower.water();
             flower.show();
         }
     }
 
-
-
-
-
-
-
-    //siądź na ławce
     //zbierz owoce ze wszystkich drzew
-    //podlej wszystkie kwiaty
+    public int gatherAllFruits(){
+        int sum = 0;
+        for(Tree tree: trees){
+          sum +=  tree.gatherFruits();
+        }
+        return sum;
+    }
 
 
     @Override

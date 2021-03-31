@@ -42,5 +42,7 @@ public class ObiektoweWstep {
             System.out.println(osoba2.getNazwa() + " jest pełnoletni");
         }
 
+
+
     }
 }
