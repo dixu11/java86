@@ -21,25 +21,8 @@ public class SamochodDemo2 {
 
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Jaka marka?");
-        String marka = scanner.nextLine();
-
-        System.out.println("Jaki przebieg?");
-        int przebieg = scanner.nextInt();
-
-        Samochod samochod = new Samochod(marka, przebieg);
-        System.out.println("Przygotowany obiekt:");
-        System.out.println(samochod);
-
-        int odloscDoPrzegladu = samochod.ileDoPrzegladu();
-        System.out.println(odloscDoPrzegladu);
-
-        if (odloscDoPrzegladu > 0) {
-            System.out.println("Przegląd dla samochudu marki: " + samochod.marka +
-                    " nalezy zrobić za " + odloscDoPrzegladu + " km");
-        } else {
-            System.out.println("Trzeba było zrobić " + Math.abs(odloscDoPrzegladu) + " km temu!!");
-        }
+        SamochodSerwis serwis = new SamochodSerwis();
+      Samochod s =  serwis.zbudujSamochod();
+        serwis.sprawdzPrzeglady(s);
     }
 }
