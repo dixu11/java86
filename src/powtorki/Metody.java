@@ -21,7 +21,11 @@ class Metody {
 
         System.out.println(add(2,2));
 
+        int result = countPower(3);
+        System.out.println(result);
 
+
+        System.out.println(countPowerRecursion(3));
     }
 
     //nagłówek / sygnatura
@@ -56,6 +60,20 @@ class Metody {
     }
 
 
+    // 2 -> 4 // 3 -> 8 // 4 -> 16 ....
+    public static int countPower(int power) {
+        int result = 2;
+        for (int i = 1; i < power; i++) {
+            result *= 2;
+        }
+        return result;
+    }
 
+    public static int countPowerRecursion(int power) {
+        if (power == 0) {
+            return 1;
+        }
+       return countPowerRecursion(power -1)*2;
+    }
 
 }
