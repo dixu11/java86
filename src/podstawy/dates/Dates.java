@@ -1,9 +1,6 @@
 package podstawy.dates;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Period;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
@@ -65,6 +62,8 @@ public class Dates {
         int binary = 0b101101; // binarny
         System.out.println(decimal);
         System.out.println(binary);
+
+
 
 
 
