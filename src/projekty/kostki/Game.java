@@ -22,12 +22,12 @@ public class Game {
     public void playGame() {
         System.out.println("Rozpoczynam grę!");
         Player winner;
-        do{
+        do {
             roundIntro();
             int roundPints = playRound();
             endRound(roundPints);
             winner = getWinner();
-        }while (winner == null);
+        } while (winner == null);
 
         System.out.println("Winner is: " + winner);
     }
@@ -54,7 +54,7 @@ public class Game {
                 roundPoints = 0;
                 break;
             }
-        }while (keepPlaying());
+        } while (keepPlaying());
         return roundPoints;
     }
 
@@ -62,15 +62,16 @@ public class Game {
         players[playerIndex].addPoints(roundPoints);
         System.out.println("Tura kolejnego gracza!");
         System.out.println("Ostatecznie uzskałeś: " + players[playerIndex].getPoints());
-        if (playerIndex == 0) {
+      /*  if (playerIndex == 0) {
             playerIndex = 1;
         } else {
             playerIndex = 0;
-        }
+        }*/
+        playerIndex = playerIndex == 0 ? 1 : 0; // tenary operator
     }
 
     private Player getWinner() {
-        if(players[0].hasWon()){
+        if (players[0].hasWon()) {
             return players[0];
         } else if (players[1].hasWon()) {
             return players[1];

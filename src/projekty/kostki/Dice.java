@@ -7,6 +7,8 @@ public class Dice {
     private int result1;
     private int result2;
 
+
+
     public void throwTwoDices() {
         result1 = throwDie();
         result2 = throwDie();
