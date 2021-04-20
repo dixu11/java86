@@ -1,6 +1,9 @@
 package obiektowe.enums;
 
 import javax.swing.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collections;
 
 class EnumDemo {
 
@@ -57,6 +60,16 @@ class EnumDemo {
         System.out.println(ShirtSize.findShirtSizeByEuropean(12));
         System.out.println(ShirtSize.findShirtSizeByEuropean(13));
         System.out.println(ShirtSize.findShirtSizeByEuropean(14));
+
+
+        ArrayList<Shirt> shirts = new ArrayList<>();
+        shirts.add(new Shirt(ShirtSize.XL));
+        shirts.add(new Shirt(ShirtSize.XL));
+        shirts.add(new Shirt(ShirtSize.S));
+        shirts.add(new Shirt(ShirtSize.M));
+        System.out.println(shirts);
+        Collections.shuffle(shirts);
+        System.out.println(shirts);
     }
 
 }

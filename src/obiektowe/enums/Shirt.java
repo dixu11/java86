@@ -15,4 +15,11 @@ class Shirt {
     int getEuropeanSize() {
         return size.getEuropeanSize();
     }
+
+    @Override
+    public String toString() {
+        return "Shirt{" +
+                "size=" + size +
+                '}';
+    }
 }
