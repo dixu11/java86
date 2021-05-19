@@ -4,4 +4,7 @@ interface WeatherObserver {
 
     void onNewWeather(Weather weather);
 
+
+
+
 }

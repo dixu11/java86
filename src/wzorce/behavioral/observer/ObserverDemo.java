@@ -13,5 +13,17 @@ class ObserverDemo {
         WeatherStation weatherStation = new WeatherStation();
         weatherStation.addObserver(forecaster);
         weatherStation.addObserver(display);
+
+        WeatherObserver observer1 =new WeatherDisplay();
+
+
+
+        if (observer1 instanceof WeatherDisplay){
+            System.out.println("działanie specyficzne dla weather display");
+        }
+
+
+
+
     }
 }
