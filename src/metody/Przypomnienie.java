@@ -1,14 +1,19 @@
 package metody;
 
+import java.util.List;
 import java.util.Random;
 
 public class Przypomnienie {
+
+  public transient static int field;
+
 
     public static void main(String[] args) {
         prostaMetoda();
         prostaMetoda();
 
         wydrukujLiczby(23,45);
+
 
 
         System.out.println(zwrocLiczbe() * 2);
@@ -18,13 +23,17 @@ public class Przypomnienie {
 
         System.out.println(polacz("Jan", "Kowalski"));
         System.out.println(polacz("Janina", "Kowalska"));
+
+        int sum = sumNumbers(3, 5, 6, 7, 675, 4);
+        System.out.println(sum);
+
     }
 
     //<typDostępu> <static> <typ zwracany> <nazwa> (<parametr1>,<parametr2>...) { <instrukcje> }
 
     //sygnatura
     //kod metody w { }
-    private static void prostaMetoda(){
+    public static void prostaMetoda(   ){
         System.out.println("To jest instrukcja 1 prostej metody");
         System.out.println("To jest instrukcja 2 prostej metody");
     }
@@ -49,6 +58,14 @@ public class Przypomnienie {
         } else {
             return "Pan "+  osoba;
         }
+    }
+
+    public static int sumNumbers(int... numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
     }
 
 
