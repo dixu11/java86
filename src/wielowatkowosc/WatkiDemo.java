@@ -54,5 +54,6 @@ public class WatkiDemo {
         //runnable.setRunning(false);
         thread.interrupt();
 
+
     }
 }
