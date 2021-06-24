@@ -1,9 +1,12 @@
 package serialization.bin;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.Scanner;
 
 public class Person2 implements Serializable {
+
     private String name;
     private int age;
     private Address address;
