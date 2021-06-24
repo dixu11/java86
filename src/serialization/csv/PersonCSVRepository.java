@@ -1,9 +1,6 @@
 package serialization.csv;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -12,15 +9,28 @@ import java.util.stream.Collectors;
 
 public class PersonCSVRepository {
 
-    public void savePerson(Person person) {
 
+    private static final String PATH = "src/serialization/csv/people.csv";
+
+    public void savePerson(Person person) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(PATH,true));
+            String csv = person.getName() + "," + person.getAge();
+            writer.newLine();
+            writer.append(csv);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+    //PrintWriter - inny sposób
 
 
     public List<Person> loadPeople() {
         List<Person> people = new ArrayList<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("src/serialization/csv/people.csv"));
+            BufferedReader reader = new BufferedReader(new FileReader(PATH));
             String line;
 
             while ((line = reader.readLine()) != null) {

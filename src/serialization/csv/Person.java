@@ -18,4 +18,12 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }
