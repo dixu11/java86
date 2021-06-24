@@ -15,12 +15,6 @@ public class Lambda {
         });
 
 
-
-
-
-
-
-
 //        Consumer - coś przyjmuje nic nie zwraca np: void(int)
 //        Supplier - nic nie przyjmuje ale coś zwraca np: int()
 //        Function - coś przyjmuje coś zwraca np: String(int)
